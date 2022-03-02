@@ -61,10 +61,15 @@ body {
   line-height: 1.5;
   color: #343a40;
   text-align: left;
+  overflow-x: hidden;
   background-color: #ffffff; }
 
 [tabindex="-1"]:focus {
   outline: 0 !important; }
+.content{
+  line-height: 1.8rem;
+  color: #798699 !important;
+}
 
 hr {
   box-sizing: content-box;
@@ -124,6 +129,10 @@ strong {
 small {
   font-size: 80%; }
 
+.portfolio-card-title {
+  margin-top: 20px;
+}
+
 sub,
 sup {
   position: relative;
@@ -139,7 +148,7 @@ sup {
 
 a {
   color: #000000;
-  text-decoration: none;
+  text-decoration: none !important;
   background-color: transparent;
   -webkit-text-decoration-skip: objects; }
   a:hover {
@@ -315,20 +324,32 @@ template {
 
 [hidden] {
   display: none !important; }
+  .services_desc{
+    color: #798699;
+  }
 
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
   margin-bottom: 0.5rem;
-  font-family: inherit;
-  font-weight: 700;
+  /* font-family: inherit; */
+  font-weight: 500;
   line-height: 1.2;
   color: #000000; }
+  
+ 
 
 h1, .h1 {
   font-size: 2rem; }
+  .lead1{
+    font-size: 1.5rem;
+    color: #091F41;
+  }
 
 h2, .h2 {
   font-size: 1.75rem; }
+  .services_title{
+    color: #091F41;
+  }
 
 h3, .h3 {
   font-size: 1.5rem; }
@@ -490,23 +511,68 @@ pre {
       max-width: 1140px; } }
 
 /* 我的简历 */
+
+.portfolioBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.portfolioCard .portfolio-card-img-top {
+  width: 390px !important;
+  height: auto !important;
+  transition: 0.2s ease-out;
+  /* height: 333px !important; */
+}
+.portfolioCard .portfolio-card-img-top:hover {
+  transform: scale(1.1);
+  /* transform: scaleY(2); */
+  /* margin-top: -20px; */
+}
+@media (min-width: 576px) {
+  .portfolioCard .portfolio-card-img-top {
+    width: 390px !important;
+    height: auto !important;
+    /* height: 333px !important; */
+  }
+}
+@media (min-width: 900px) {
+  .portfolioBox {
+    display: grid;
+    gap: 10px 50px;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: repeat(2, auto);
+  }
+}
+@media (min-width: 1300px) {
+  .portfolioBox {
+    display: grid;
+    gap: 10px 50px;
+    align-items: center;
+    justify-content: center;
+    grid-template-columns: repeat(3, auto);
+  }
+}
+@media (min-width: 1800px) {
+  .portfolioBox {
+    display: grid;
+    gap: 10px 50px;
+    align-items: center;
+    justify-content: center;
+    grid-template-columns: repeat(4, auto);
+  }
+}
+
 .portfolioContainer {
   padding: 0 !important;
 }
 
-.portfolioBox {
-  display: flex;
-  justify-content: center;
-}
 
 
 .portfolioCard {
-  margin-right: 100px;
   cursor: pointer;
-}
-
-.portfolioCard:last-child {
-  margin-right: 0;
 }
 
 .container-fluid {
@@ -869,9 +935,10 @@ pre {
         flex: 0 0 50%;
     max-width: 50%; }
   .col-md-7 {
-    -ms-flex: 0 0 58.33333%;
-        flex: 0 0 58.33333%;
-    max-width: 58.33333%; }
+    /* -ms-flex: 0 0 58.33333%; */
+        /* flex: 0 0 58.33333%; */
+    /* max-width: 58.33333%; */
+  }
   .col-md-8 {
     -ms-flex: 0 0 66.66667%;
         flex: 0 0 66.66667%;
@@ -3169,7 +3236,7 @@ tbody.collapse.show {
   background-color: #ffffff;
   background-clip: border-box;
   border: 0px solid rgba(0, 0, 0, 0.125);
-  border-radius: 0.25rem; }
+  border-radius: 0.8rem; }
   .card > hr {
     margin-right: 0;
     margin-left: 0; }
@@ -4422,6 +4489,12 @@ button.close {
 .bg-primary {
   background-color: #000000 !important; }
 
+.servicescard{
+  transition: 0.2s ease-out; }
+ 
+.servicescard:hover{
+    transform: scale(1.05); }
+
 a.bg-primary:focus, a.bg-primary:hover,
 button.bg-primary:focus,
 button.bg-primary:hover {
@@ -5383,10 +5456,18 @@ button.bg-dark:hover {
 .mt-2,
 .my-2 {
   margin-top: 0.5rem !important; }
+.fa-angle-up{
+  height: 100%;
+  line-height: 100%;
+  margin-top: -6px;
+}
 
 .mr-2,
 .mx-2 {
   margin-right: 0.5rem !important; }
+  .zhiwei{
+    color: #091F41 !important;
+  }
 
 .mb-2,
 .my-2 {
@@ -5417,6 +5498,9 @@ button.bg-dark:hover {
 
 .m-4 {
   margin: 1.5rem !important; }
+.mt-4{
+  color: rgba(255, 255, 255, 0.65);
+}
 
 .mt-4,
 .my-4 {
@@ -6751,7 +6835,10 @@ a.text-dark:focus, a.text-dark:hover {
   color: #0a0c0d !important; }
 
 .text-muted {
-  color: #868e96 !important; }
+  color: #868e96 !important; 
+  font-weight: normal;
+font-size: 16px;
+line-height: 1.8em;}
 
 .text-hide {
   font: 0/0 a;
@@ -6866,8 +6953,13 @@ Custom CSS
 /* Skills */
 .skill {
   margin-top: 1.5rem; }
+
   .skill .skill-name {
     margin-bottom: 0.625rem; }
+
+.skill:hover .progress-bar {
+  width: 100% !important;
+}
 
 /*Navbar*/
 .navbar.navbar-transparent {
@@ -6933,7 +7025,7 @@ Custom CSS
   width: 3.125rem !important;
   height: 0.25rem;
   border-radius: 0.25rem !important;
-  margin-top: 1.5rem;
+  margin-top: 0.5rem;
   margin-bottom: 1.5rem; }
   .divider.divider-sm {
     height: 0.125rem; }
@@ -6957,6 +7049,11 @@ footer a {
     color: rgba(255, 255, 255, 0.9);
     text-decoration: none;
     transition: all 0.2s ease-in-out; }
+    .mb-2{
+      display: flex;
+      align-items: center;
+      color: rgba(255, 255, 255, 0.65);
+    }
 
 footer hr {
   margin-top: 4rem;
@@ -7051,7 +7148,7 @@ footer hr {
 
 /*press section*/
 .press .press-item {
-  opacity: 0.4; }
+  opacity: 0.5; }
   .press .press-item:hover {
     opacity: 1;
     transition: all 0.4s ease-in-out;
@@ -7091,7 +7188,7 @@ footer hr {
       background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2) calc(100% - 50px), transparent 100%); }
     .timeline .root .date {
       position: relative;
-      width: 140px;
+      width: 145px;
       text-transform: uppercase;
       margin-top: -4px;
       font-weight: 700;
@@ -7292,3 +7389,7 @@ span.bull {
 @media screen and (max-width: 768px) {
   .switcher-wrap {
     display: none; } }
+    /* 这是我写的 */
+    .col-md-7.mx-auto.text-center{
+      font-weight: bold;
+    }

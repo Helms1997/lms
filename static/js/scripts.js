@@ -1,10 +1,10 @@
 $(function () {
 
     // init typist
-    new Typist(document.querySelector(".typist"), {
-        letterInterval: 60,
-        textInterval: 1000
-    });
+    // new Typist(document.querySelector(".typist"), {
+    //     letterInterval: 60,
+    //     textInterval: 1000
+    // });
 
     // init feather icons
     feather.replace();
